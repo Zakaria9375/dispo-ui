@@ -10,7 +10,7 @@ const toggleOpen = () => {
 </script>
 
 <template>
-  <header class="h-28 zflex maxlg2R:mx-8 minlg2R:mx-12">
+  <header class="md:h-[100px] lmd:h-20 zflex maxlg2R:mx-8 minlg2R:mx-12">
     <div class="container flex justify-between items-center max-w-[1300px]">
       <section class="flex items-center text-[13px] font-bold text-[#5c5b6d]">
         <div class="logo mr-10"><a href="/" class="cursor-pointer">Dispo</a></div>

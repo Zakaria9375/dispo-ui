@@ -13,12 +13,17 @@
 	}
 
 	.zmonth {
-		@apply font-bold text-[11px] min-w-fit px-6 py-3 rounded-full border border-gray1;
+		@apply font-bold text-[11px] min-w-fit px-6 py-3 rounded-full border border-gray1 hover:bg-primary  hover:text-white cursor-pointer;
 	}
 	.zairport {
-		@apply font-semibold text-sm;
+		@apply font-semibold text-sm translate-y-[2px];
 	}
-
+	.zheight {
+		height: calc(100% - 16px);
+	}
+	.line-after {
+		@apply after:content-[''] after:border-2 after:border-black after:absolute after:zheight after:bottom-[-2px] after:left-[50%] after:translate-x-[-1.5px] after:border-l;
+	}
 	.material-symbols-outlined {
 		font-variation-settings:
 			'FILL' 0,

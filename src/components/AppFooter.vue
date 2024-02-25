@@ -1,6 +1,6 @@
 <template>
   <footer class="zflex">
-    <div class="container zflex llg:gap-4 p-4">
+    <div class="container zflex llg:gap-4 p-4 mt-4 mb-2">
       <div class="basis-2/5 zflex flex-wrap font-bold md:space-x-4  lmd:order-2 lmd:flex-col text-center">
         <a to="/">Log in</a>
         <a to="/">Sign up</a>

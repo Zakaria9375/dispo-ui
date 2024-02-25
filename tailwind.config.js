@@ -28,6 +28,7 @@ module.exports = {
         secondary: '#231e60',
         secondaryLighter: '#2e277d',
         third: '#171a2d',
+				thirdLighter: '#262b4a',
         gtext: '#ededed',
         gtext2: '#d6d7dc',
         gtext3: '#707070',
