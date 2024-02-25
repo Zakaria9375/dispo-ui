@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+	.logo {
+		@apply font-nunito text-secondary text-5xl font-black tracking-tighter;
+	}
+
+	.zflex {
+		@apply flex items-center justify-center;
+	}
+
+	.zmonth {
+		@apply font-bold text-[11px] min-w-fit px-6 py-3 rounded-full border border-gray1;
+	}
+	.zairport {
+		@apply font-semibold text-sm;
+	}
+
+	.material-symbols-outlined {
+		font-variation-settings:
+			'FILL' 0,
+			'wght' 300,
+			'GRAD' 0,
+			'opsz' 24
+	}
+}
