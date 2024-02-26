@@ -15,21 +15,19 @@ const locations = ref<Location[]>([
   { title: 'Lithuania airport', lat: 54.635432, lng: 25.285365 },
   { title: 'Lithuania airport2', lat: 54.687814, lng: 25.278893 }
 ])
-let map: google.maps.Map;
-let infoWindow: google.maps.InfoWindow;
 
 async function initMap() {
 	
   const { Map, InfoWindow } = await google.maps.importLibrary('maps') as google.maps.MapsLibrary;
   const { AdvancedMarkerElement, PinElement } = await google.maps.importLibrary('marker') as google.maps.MarkerLibrary;
 
-  map = new google.maps.Map(document.getElementById('map') as HTMLElement, {
+ const map = new google.maps.Map(document.getElementById('map') as HTMLElement, {
     center: { lat: 56.236746, lng: 24.576077 },
     zoom: 5,
 		mapId: 'Hyl4lesWicvCQ7Nhhm6No'
   })
 
-  infoWindow = new google.maps.InfoWindow({
+ const infoWindow = new google.maps.InfoWindow({
     content: '',
     disableAutoPan: true
   })
