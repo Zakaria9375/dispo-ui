@@ -1,7 +1,7 @@
 
 <script setup lang="ts">
 import GoogleMap from './GoogleMap.vue';
-import AppCarousel from './AppCarousel.vue'
+import AppCarousel from './utils/AppCarousel.vue'
 import { ref } from 'vue';
 const carousel = ref(null)
 </script>
@@ -25,9 +25,9 @@ const carousel = ref(null)
         </div>
         <div class="basis-1/2 py-2 pl-8 flex-col border-l">
           <div class="flex items-center space-x-2 pb-3">
-            <img class="w-6 h-5 object-contain" src="/finland.png" alt="finnish" />
-            <img class="w-6 h-5 object-contain" src="/france.png" alt="french" />
-            <img class="w-6 h-5 object-contain" src="/germany.png" alt="deutsch" />
+            <img class="w-6 h-5 object-contain" src="/images/finland.png" alt="finnish" />
+            <img class="w-6 h-5 object-contain" src="/images/france.png" alt="french" />
+            <img class="w-6 h-5 object-contain" src="/images/germany.png" alt="deutsch" />
           </div>
           <div class="text-[#6c6c6c] font-semibold text-[12px]">Name of carrier</div>
           <div class="font-bold pb-3">Bambam SIA</div>
