@@ -107,8 +107,8 @@ const carousel = ref<Carousel | null>(null)
             <span class="material-symbols-outlined zSharpIcon"> location_on </span>
           </div>
           <div class="flex-1">
-            <div class="flex flex-wrap mt-5">
-              <div class="flex items-center grow">
+            <div class="flex flex-wrap mt-5 lsm:mt-6 lsm:space-y-3">
+              <div class="flex items-center grow lsm:flex-col lsm:space-y-2 lsm:items-start">
                 <span class="zairport">Riga international airport </span>
                 <span class="zairport text-gtext4 ml-1">P133, Marupe, LV-10...</span>
               </div>
@@ -118,9 +118,9 @@ const carousel = ref<Carousel | null>(null)
                 <span class="zairport">16:45</span>
               </div>
             </div>
-            <div class="flex flex-wrap mt-5">
-              <div class="flex items-center grow">
-                <span class="zairport">Lithuania airport </span>
+            <div class="flex flex-wrap mt-5 lsm:mt-6 lsm:space-y-3">
+              <div class="flex items-center grow  lsm:flex-col lsm:space-y-2 lsm:items-start" >
+                <span class="zairport ">Lithuania airport </span>
                 <span class="zairport text-gtext4 ml-1">Road name, LT223, Lithuania</span>
               </div>
               <div class="zflex space-x-1 ml-2">
@@ -134,8 +134,8 @@ const carousel = ref<Carousel | null>(null)
                 <span class="zairport">19:45</span>
               </div>
             </div>
-            <div class="flex flex-wrap mt-5">
-              <div class="flex items-center grow">
+            <div class="flex flex-wrap mt-5 lsm:mt-6 lsm:space-y-3">
+              <div class="flex items-center grow lsm:flex-col lsm:space-y-2 lsm:items-start">
                 <span class="zairport">Lithuania airport </span>
                 <span class="zairport text-gtext4 ml-1">Road name, LT223, Lithuania</span>
               </div>

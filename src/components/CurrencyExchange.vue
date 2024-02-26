@@ -26,7 +26,7 @@ function changeCurrency (currency: string) {
       <span class="mr-3 maxlg2R:hidden">{{ selectedCurrency }}</span>
       <span class="material-symbols-outlined"> currency_exchange </span>
     </div>
-    <div v-if="isOpen" class="bg-white rounded-lg shadow-md py-5 px-6 absolute space-y-4 z-50 min-w-40 ">
+    <div v-if="isOpen" class="bg-white rounded-lg shadow-md py-5 px-6 absolute space-y-4 z-50 min-w-40 right-0">
       <div @click="changeCurrency(currency.title)" v-for="currency in currencies" :key="currency.symbol" class="flex items-center justify-between cursor-pointer">
         <span class="text-base font-bold font-nunito">{{ currency.symbol }}</span>
         <span class="text-base font-bold font-nunito">{{ currency.title }}</span>

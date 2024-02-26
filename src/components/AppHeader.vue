@@ -3,6 +3,8 @@ import { ref } from 'vue'
 import { useWindowSize } from '@vueuse/core'
 import CurrencyExchange from './CurrencyExchange.vue'
 import LanguageChange from './LanguageChange.vue'
+import { vOnClickOutside } from '@vueuse/components'
+
 const isOpen = ref(false)
 const { width } = useWindowSize()
 const toggleOpen = () => {
@@ -35,7 +37,7 @@ const toggleOpen = () => {
           </div>
           <a to="/" class="cursor-pointer hover:text-primary">Log in / Sign up</a>
         </div>
-        <div @click="toggleOpen" class="lg:hidden cursor-pointer zflex w-12 h-12 border rounded-lg">
+        <div @click="toggleOpen"  v-on-click-outside="toggleOpen" class="lg:hidden cursor-pointer zflex w-12 h-12 border rounded-lg">
           <span v-show="!isOpen" class="material-symbols-outlined sharp"> menu </span>
           <span v-show="isOpen" class="material-symbols-outlined sharp"> close </span>
         </div>

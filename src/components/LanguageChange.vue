@@ -27,7 +27,7 @@ function changeLanguage (currency: string) {
       <span class="mr-3 maxlg2R:hidden">{{ selectedLanguage }}</span>
       <span class="material-symbols-outlined"> language </span>
     </div>
-    <div v-if="isOpen" class="bg-white rounded-lg shadow-md py-5 px-6 absolute space-y-4 z-50 min-w-40">
+    <div v-if="isOpen" class="bg-white rounded-lg shadow-md py-5 px-6 absolute space-y-4 z-50 min-w-40 right-0">
       <div @click="changeLanguage(language.title)"  v-for="language in Languages" :key="language.title" class="flex items-center justify-between cursor-pointer">
         <img class="size-6" :src="`/images/${language.flag}`" :alt="language.title">
         <span class="text-base font-bold font-nunito">{{ language.title }}</span>
