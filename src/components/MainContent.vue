@@ -1,7 +1,9 @@
 
-<script setup>
+<script setup lang="ts">
 import GoogleMap from './GoogleMap.vue';
-
+import AppCarousel from './AppCarousel.vue'
+import { ref } from 'vue';
+const carousel = ref(null)
 </script>
 <template>
   <div class="flex llg:flex-col llg:items-center gap-x-4">
@@ -70,22 +72,23 @@ import GoogleMap from './GoogleMap.vue';
     <section class="xl:basis-3/5 flex-1 llg:max-w-[100%] lg:max-w-[60%] llg:mt-4">
       <div class="zflex pb-8 space-x-2 divide-b-2">
         <button class="bg-third rounded-full py-3 px-6 text-white font-medium hover:bg-thirdLighter lsm:text-sm">Trip details</button>
-        <button class="bg-white border border-gray1 border-2 px-6 py-3 rounded-full font-medium hover:bg-gtext3 hover:text-white lsm:text-sm">
+        <button class="bg-white border border-gray1 border-2 px-6 py-3 rounded-full font-medium hover:bg-[#777] hover:text-white lsm:text-sm">
           Return trip details
         </button>
       </div>
       <div class="px-4 pt-8 border-t">
         <section class="zflex gap-4 max-w-full">
-          <div class="bg-gray2 rounded-full p-2 zflex  transion-all duration-100 hover:shadow-lg cursor-pointer">
+          <div @click="carousel.myCarousel.prev()" class="bg-gray2 rounded-full p-2 zflex  transion-all duration-100 hover:shadow-lg cursor-pointer">
             <span class="material-symbols-outlined zSharpIcon">arrow_left_alt</span>
           </div>
-          <div class="flex flex-1 items-center gap-4 left-shadow py-2 overflow-hidden max-w-full">
+          <!-- <div class="flex flex-1 items-center gap-4 left-shadow py-2 overflow-hidden max-w-full">
             <div class="zmonth bg-primary text-white">6 November</div>
             <div class="zmonth">7 November</div>
             <div class="zmonth">8 November</div>
             <div class="zmonth">9 November</div>
-          </div>
-          <div class="bg-gray2 rounded-full p-2 zflex transion-all duration-100 hover:shadow-lg cursor-pointer">
+          </div> -->
+					<AppCarousel ref="carousel"/>
+          <div @click="carousel.myCarousel.next()" class="bg-gray2 rounded-full p-2 zflex transion-all duration-100 hover:shadow-lg cursor-pointer">
             <span class="material-symbols-outlined zSharpIcon">arrow_right_alt</span>
           </div>
         </section>

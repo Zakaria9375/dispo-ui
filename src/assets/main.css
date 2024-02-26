@@ -24,6 +24,9 @@
 	.line-after {
 		@apply after:content-[''] after:border-2 after:border-black after:absolute after:zheight after:bottom-[-2px] after:left-[50%] after:translate-x-[-1.5px] after:border-l;
 	}
+	.active {
+		@apply bg-primary text-white
+	}
 	.material-symbols-outlined {
 		font-variation-settings:
 			'FILL' 0,
