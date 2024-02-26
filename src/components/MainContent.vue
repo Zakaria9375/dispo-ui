@@ -3,7 +3,15 @@
 import GoogleMap from './GoogleMap.vue';
 import AppCarousel from './utils/AppCarousel.vue'
 import { ref } from 'vue';
-const carousel = ref(null)
+
+interface Carousel {
+	myCarousel: {
+		prev: () => void;
+		next: () => void;
+	}
+}
+
+const carousel = ref<Carousel | null>(null)
 </script>
 <template>
   <div class="flex llg:flex-col llg:items-center gap-x-4">
@@ -78,7 +86,7 @@ const carousel = ref(null)
       </div>
       <div class="px-4 pt-8 border-t">
         <section class="zflex gap-4 max-w-full">
-          <div @click="carousel.myCarousel.prev()" class="bg-gray2 rounded-full p-2 zflex  transion-all duration-100 hover:shadow-lg cursor-pointer">
+          <div v-if="carousel" @click="carousel.myCarousel.prev()" class="bg-gray2 rounded-full p-2 zflex  transion-all duration-100 hover:shadow-lg cursor-pointer">
             <span class="material-symbols-outlined zSharpIcon">arrow_left_alt</span>
           </div>
           <!-- <div class="flex flex-1 items-center gap-4 left-shadow py-2 overflow-hidden max-w-full">
@@ -88,7 +96,7 @@ const carousel = ref(null)
             <div class="zmonth">9 November</div>
           </div> -->
 					<AppCarousel ref="carousel"/>
-          <div @click="carousel.myCarousel.next()" class="bg-gray2 rounded-full p-2 zflex transion-all duration-100 hover:shadow-lg cursor-pointer">
+          <div  v-if="carousel" @click="carousel.myCarousel.next()" class="bg-gray2 rounded-full p-2 zflex transion-all duration-100 hover:shadow-lg cursor-pointer">
             <span class="material-symbols-outlined zSharpIcon">arrow_right_alt</span>
           </div>
         </section>
