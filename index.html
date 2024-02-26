@@ -16,8 +16,16 @@
 		<link rel="stylesheet"
 			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 		<!-- Google Map Api -->
-		<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtsG7RkG8U4eHyl4lesWicvCQ7Nhhm6No&loading=async&libraries=marker,maps&map_ids=Hyl4lesWicvCQ7Nhhm6No">
-		</script>
+		<script async defer
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtsG7RkG8U4eHyl4lesWicvCQ7Nhhm6No&loading=async&libraries=marker,maps&map_ids=Hyl4lesWicvCQ7Nhhm6No&callback=initMap">
+			</script>
+		<script>
+			function initMap() {
+			window.isGoogleMapsLoaded = true;
+			// Optionally, dispatch a custom event to notify the app that Google Maps API is ready
+			window.dispatchEvent(new Event('google-maps-loaded'));
+			}
+			</script>
 	</head>
 
 	<body>

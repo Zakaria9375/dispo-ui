@@ -2,7 +2,9 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
 import { MarkerClusterer } from "@googlemaps/markerclusterer";
-
+import { watch } from 'vue';
+import { useGoogleMapsApi } from '@/useGoogleMapApi';
+const { isLoaded } = useGoogleMapsApi();
 
 interface Location {
   title: string
@@ -16,7 +18,7 @@ const locations = ref<Location[]>([
   { title: 'Lithuania airport2', lat: 54.687814, lng: 25.278893 }
 ])
 
-async function initMap() {
+async function initGoogleMap() {
 	
   const { Map, InfoWindow } = await google.maps.importLibrary('maps') as google.maps.MapsLibrary;
   const { AdvancedMarkerElement, PinElement } = await google.maps.importLibrary('marker') as google.maps.MarkerLibrary;
@@ -53,8 +55,14 @@ async function initMap() {
 }
 
 onMounted(() => {
-  initMap()
+  initGoogleMap()
 })
+
+watch(isLoaded, (loaded) => {
+  if (loaded) {
+    initGoogleMap();
+  }
+});
 </script>
 
 <template>
