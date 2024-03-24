@@ -33,4 +33,4 @@ npm run dev
 
 ## Links
 
-[Live](https://dispo.zaportfolio.com/)
+[Live](https://dispo-ui.netlify.app/)
