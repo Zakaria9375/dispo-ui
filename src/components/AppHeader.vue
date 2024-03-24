@@ -10,6 +10,9 @@ const { width } = useWindowSize()
 const toggleOpen = () => {
   isOpen.value = !isOpen.value
 }
+const close = () => {
+	isOpen.value = false
+}
 </script>
 
 <template>
@@ -37,7 +40,7 @@ const toggleOpen = () => {
           </div>
           <a to="/" class="cursor-pointer hover:text-primary">Log in / Sign up</a>
         </div>
-        <div @click="toggleOpen"  v-on-click-outside="toggleOpen" class="lg:hidden cursor-pointer zflex w-12 h-12 border rounded-lg">
+        <div @click="toggleOpen"  v-on-click-outside="close" class="lg:hidden cursor-pointer zflex w-12 h-12 border rounded-lg">
           <span v-show="!isOpen" class="material-symbols-outlined sharp"> menu </span>
           <span v-show="isOpen" class="material-symbols-outlined sharp"> close </span>
         </div>
